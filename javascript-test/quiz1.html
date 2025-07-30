@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz 1-10</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <button id="theme-toggle">☯️ Tema Değiştir</button>
+
+
+
+    <h1>JavaScript Quiz (1-10)</h1>
+    
+  
+  <p id="score">Skor: 0 / 20</p> <!-- Bu yeni sayaç -->
+
+</header>
+<!--ilerleme barı--> 
+<div id="progress-container">
+  <div id="progress-bar"></div>
+</div>
+
+  <main>
+    <div id="left-column" class="column"></div>
+    <div id="right-column" class="column"></div>
+  </main>
+
+  <div class="buttons">
+    <button onclick="clearAnswers()">Cevapları Sıfırla</button>
+    <button onclick="location.href='quiz2.html'">Sonraki 10 Soruyu Göster</button>
+  </div>
+
+  <footer>
+    &copy; 2025 JavaScript Quiz Sistemi
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    renderQuestions(0, 9);
+  </script>
+</body>
+</html>
