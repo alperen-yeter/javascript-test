@@ -1,0 +1,165 @@
+:root {
+  --background: #f0f0f0;
+  --text: #333;
+  --box: #fff;
+  --correct: #4CAF50;
+  --incorrect: #f44336;
+  --button-bg: #2196F3;
+  --button-text: #fff;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 10px 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.column {
+  flex: 1;
+}
+
+.question {
+  background-color: #f4f4f4; /* açık mod için */
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.question p {
+  font-weight: bold;
+}
+
+.options button {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ddd;
+  font-size: 16px;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+.options button.correct {
+  background-color: var(--correct);
+  color: white;
+}
+
+.options button.incorrect {
+  background-color: var(--incorrect);
+  color: white;
+}
+
+.options button:disabled {
+  cursor: default;
+  opacity: 0.8;
+}
+
+.buttons {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.buttons button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #0b7dda;
+}
+
+footer {
+  margin-top: auto;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #777;
+  background-color: #333;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+/* Dark mode aktifken yazılar ve buton renkleri */
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode .question {
+  background-color: #1e1e1e; /* koyu gri */
+}
+
+body.dark-mode .options button {
+  background-color: #444;
+  color: #eee;
+  border: 1px solid #666;
+}
+
+body.dark-mode .options button.correct {
+  background-color: #2e7d32; /* koyu yeşil */
+  color: white;
+}
+
+body.dark-mode .options button.incorrect {
+  background-color: #c62828; /* koyu kırmızı */
+  color: white;
+}
+
+body.dark-mode .options button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+.correct-answer {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #2ecc71;
+}
+#progress-container {
+  width: 100%;
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+  transition: width 0.3s ease-in-out;
+}
